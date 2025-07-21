@@ -1,0 +1,134 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.floorplan {
+  background: #111;
+  padding: 50px 20px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.floorplan h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #ccc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.room {
+  padding: 40px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px white;
+}
+
+
+.memory { background: #405de6; }
+.curiosity { background: #f9a825; }
+.chaos { background: #e53935; }
+.imagination { background: #8e24aa; }
+.empathy { background: #ec407a; }
+.wisdom { background: #00897b; }
+.growth { background: #43a047; }
+.depth { background: #6a1b1a; }
+
+
+.room-section {
+  height: 100vh;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.room-section h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.room-section p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.room-section a {
+  background: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+
+.memory-theme {
+  background: linear-gradient(135deg, #405de6, #6b7bfd);
+}
+
+.curiosity-theme {
+  background: linear-gradient(135deg, #f9a825, #fbc02d);
+  color: #222;
+}
+
+.chaos-theme {
+  background: linear-gradient(135deg, #e53935, #ff5252);
+}
+
+.imagination-theme {
+  background: linear-gradient(135deg, #8e24aa, #ba68c8);
+}
+.empathy-theme {
+  background: linear-gradient(135deg, #ec407a, #f48fb1);
+}
+
+.wisdom-theme {
+  background: linear-gradient(135deg, #00897b, #26a69a);
+}
+
+.growth-theme {
+  background: linear-gradient(135deg, #43a047, #66bb6a);
+}
+
+.depth-theme {
+  background: linear-gradient(135deg, #6a1b1a, #8e2420);
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.room-section h2, .room-section p {
+  animation: float 5s ease-in-out infinite;
+}
+
